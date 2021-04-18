@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas basic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="moon"></div>
+   
+    <canvas id="canvas"></canvas>
+    <canvas id="canvasbg"></canvas>
+    <script src="script.js"></script>
+    <svg>
+        <defs>
+            <filter id="go">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+                <feColorMatrix in ="blur" mode="matrix" value="1 0 0 0 0
+                                                               0 1 0 0 0
+                                                               0 0 1 0 0
+                                                               0 0 0 30 -30"
+                                                              result = "goo"/>
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+    <footer id="foot">
+           <h2>Hii Niru...</h2>
+            <div>
+                Someone special like you deserves the best.Tried a bit to give you a 
+                little yet best surprise with this gift.
+            </div>
+            
+            <botton id="btn"> Click Here</botton>
+    </footer>
+</body>
+
+</html>
